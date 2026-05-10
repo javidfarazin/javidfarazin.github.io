@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Javid Farazin, MSc</title>
+<meta name="description" content="I am a physicist and R&D researcher working at the intersection of optical tweezers, microscopy, and deep learning. Seeking a fully funded PhD in Europe.">
+<meta property="og:title" content="Javid Farazin, MSc">
+<meta property="og:description" content="Physicist & ML Researcher — Optical Tweezers · Deep Learning · Biophotonics">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Source+Sans+3:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --white: #ffffff;
+  --bg: #f7f6f3;
+  --border: #e0ddd6;
+  --border-light: #ece9e2;
+  --text: #1d1d1b;
+  --text-muted: #666660;
+  --text-light: #999993;
+  --accent: #2a4a6b;
+  --link: #2a4a6b;
+  --nav-h: 52px;
+  --sidebar-w: 240px;
+  --serif: 'Source Serif 4', Georgia, serif;
+  --sans: 'Source Sans 3', system-ui, sans-serif;
+}
+html { font-size: 16px; scroll-behavior: smooth; }
+body { font-family: var(--sans); font-weight: 400; color: var(--text); background: var(--bg); line-height: 1.7; }
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+p { margin: 0 0 1em; }
+p:last-child { margin-bottom: 0; }
+strong { font-weight: 500; }
+
+/* TOP NAV */
+.topnav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--white); border-bottom: 1px solid var(--border);
+  height: var(--nav-h); display: flex; align-items: center;
+}
+.topnav-inner {
+  display: flex; align-items: center;
+  width: 100%; max-width: 980px; margin: 0 auto; padding: 0 1.5rem;
+}
+.topnav-brand {
+  font-family: var(--serif); font-weight: 400; font-size: 1.05rem;
+  color: var(--text); margin-right: auto;
+}
+.topnav-brand:hover { text-decoration: none; color: var(--accent); }
+.nav-links { display: flex; }
+.nav-links a {
+  display: block; padding: 0 1rem; font-size: 0.875rem; font-weight: 400;
+  color: var(--text-muted); height: var(--nav-h); line-height: var(--nav-h);
+  border-bottom: 2px solid transparent; transition: color .15s, border-color .15s;
+}
+.nav-links a:hover { color: var(--text); text-decoration: none; border-bottom-color: var(--border); }
+.nav-links a.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* HERO BANNER */
+.hero-banner {
+  background: linear-gradient(135deg, #0f2540 0%, #1e4976 40%, #2e6da4 70%, #4a90c9 100%);
+  height: 190px; position: relative; overflow: hidden;
+}
+.hero-banner::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse 50% 100% at 75% 50%, rgba(255,255,255,0.07) 0%, transparent 70%);
+}
+.hero-banner::after {
+  content: ''; position: absolute; top: 45%; left: 50%; width: 400px; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+  transform: rotate(-5deg);
+  box-shadow: 0 10px 0 rgba(255,255,255,0.05), 0 -10px 0 rgba(255,255,255,0.05);
+}
+
+/* PAGE BODY */
+.page-body {
+  max-width: 980px; margin: 0 auto; padding: 0 1.5rem 5rem;
+  display: flex; align-items: flex-start; gap: 3rem;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: var(--sidebar-w); flex-shrink: 0;
+  margin-top: -80px;
+  position: sticky; top: calc(var(--nav-h) + 1.5rem);
+}
+.avatar-card {
+  background: var(--white); border: 1px solid var(--border);
+  padding: 1.5rem 1.25rem; text-align: center;
+}
+.avatar-circle {
+  width: 128px; height: 128px; border-radius: 50%;
+  background: linear-gradient(145deg, #c0d8ee 0%, #82b3d6 100%);
+  margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center;
+  font-family: var(--serif); font-size: 2.6rem; font-weight: 300; color: #1d3e5a;
+  border: 4px solid var(--white); box-shadow: 0 0 0 1px var(--border);
+}
+.sidebar-name { font-family: var(--serif); font-size: 1.1rem; font-weight: 400; color: var(--text); line-height: 1.3; margin-bottom: 0.3rem; }
+.sidebar-role { font-size: 0.79rem; color: var(--text-muted); line-height: 1.55; margin-bottom: 1rem; }
+.sidebar-hr { border: none; border-top: 1px solid var(--border-light); margin: 1rem 0; }
+.sidebar-affil { font-size: 0.79rem; color: var(--text-muted); line-height: 1.6; text-align: left; }
+.sidebar-affil strong { color: var(--text); font-weight: 500; display: block; }
+.slinks { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1rem; text-align: left; }
+.slinks a { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: var(--text-muted); transition: color .15s; }
+.slinks a:hover { color: var(--accent); text-decoration: none; }
+.slink-icon { width: 14px; height: 14px; flex-shrink: 0; }
+
+/* MAIN */
+.main-content { flex: 1; min-width: 0; padding-top: 2.75rem; }
+section { margin-bottom: 3.25rem; }
+.section-title { font-family: var(--serif); font-size: 1.55rem; font-weight: 400; color: var(--text); margin-bottom: 0.5rem; }
+.section-rule { border: none; border-top: 1px solid var(--border); margin-bottom: 1.6rem; }
+
+/* ABOUT */
+.about-tagline {
+  font-family: var(--serif); font-style: italic; font-weight: 300; font-size: 1.05rem;
+  color: var(--text-muted); margin-bottom: 1.25rem; padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-light);
+}
+.about-body { font-size: 0.94rem; line-height: 1.85; }
+.award-block {
+  margin-top: 1.25rem; padding: 0.75rem 1rem;
+  background: #fdf8ec; border-left: 3px solid #c9a227;
+  font-size: 0.87rem; color: #5a4510; line-height: 1.55;
+}
+
+/* PUBLICATIONS */
+.pub-list { list-style: none; }
+.pub-item { padding: 1rem 0; border-bottom: 1px solid var(--border-light); }
+.pub-item:last-child { border-bottom: none; }
+.pub-title { font-family: var(--serif); font-size: 0.95rem; font-weight: 400; color: var(--text); line-height: 1.5; margin-bottom: 0.2rem; }
+.pub-authors { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.15rem; }
+.pub-venue { font-size: 0.82rem; color: var(--text-light); font-style: italic; }
+.pub-badge {
+  display: inline-block; padding: 0.1rem 0.45rem; border-radius: 2px;
+  font-size: 0.7rem; font-weight: 500; margin-left: 0.35rem;
+  vertical-align: middle; font-style: normal; font-family: var(--sans);
+}
+.badge-wip  { background: #fef3cd; color: #7a5c00; }
+.badge-conf { background: #e8f4f0; color: #1a6045; }
+.badge-best { background: #fdefd7; color: #7a3f00; }
+.show-btn {
+  background: none; border: 1px solid var(--border); color: var(--text-muted);
+  font-family: var(--sans); font-size: 0.82rem; padding: 0.45rem 1rem;
+  cursor: pointer; margin-top: 0.75rem; transition: background .15s, color .15s;
+}
+.show-btn:hover { background: var(--border-light); color: var(--text); }
+.hidden-pubs { display: none; }
+.hidden-pubs.open { display: block; }
+
+/* CV */
+.cv-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+.cv-section-label {
+  font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--text-light); font-weight: 500; margin-bottom: 0.75rem; margin-top: 1.75rem;
+}
+.cv-section-label:first-child { margin-top: 0; }
+.tl-item { display: grid; grid-template-columns: 90px 1fr; gap: 0 1rem; padding: 0.75rem 0; border-bottom: 1px solid var(--border-light); }
+.tl-item:last-child { border-bottom: none; }
+.tl-year { font-size: 0.77rem; color: var(--text-light); padding-top: 0.1rem; line-height: 1.4; }
+.tl-title { font-weight: 500; font-size: 0.88rem; color: var(--text); line-height: 1.4; }
+.tl-sub { font-size: 0.8rem; color: var(--text-muted); }
+.tl-desc { font-size: 0.79rem; color: var(--text-light); margin-top: 0.15rem; }
+.skill-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 0.5rem; }
+.skill-tag { font-size: 0.77rem; padding: 0.18rem 0.55rem; border: 1px solid var(--border); color: var(--text-muted); background: var(--white); }
+
+/* CONTACT */
+.contact-note { font-size: 0.92rem; color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.75; }
+.contact-row { display: flex; gap: 1rem; font-size: 0.88rem; align-items: baseline; padding: 0.55rem 0; border-bottom: 1px solid var(--border-light); }
+.contact-row:last-child { border-bottom: none; }
+.c-label { min-width: 110px; font-size: 0.77rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-light); font-weight: 500; flex-shrink: 0; }
+
+/* FOOTER */
+.site-footer { text-align: center; padding: 2rem 1.5rem; font-size: 0.78rem; color: var(--text-light); border-top: 1px solid var(--border); background: var(--white); }
+
+/* MOBILE */
+@media (max-width: 720px) {
+  .page-body { flex-direction: column; gap: 0; padding: 0 1rem 3rem; }
+  .sidebar { width: 100%; margin-top: 0; position: static; padding-top: 1.5rem; margin-bottom: 1rem; }
+  .avatar-card { display: flex; align-items: flex-start; gap: 1rem; text-align: left; padding: 1rem; }
+  .avatar-circle { width: 72px; height: 72px; font-size: 1.6rem; margin: 0; flex-shrink: 0; }
+  .slinks { flex-direction: row; flex-wrap: wrap; }
+  .hero-banner { height: 100px; }
+  .nav-links a { padding: 0 0.55rem; font-size: 0.8rem; }
+  .cv-cols { grid-template-columns: 1fr; gap: 0; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<header>
+  <nav class="topnav" aria-label="Site navigation">
+    <div class="topnav-inner">
+      <a href="#" class="topnav-brand">Javid Farazin</a>
+      <div class="nav-links">
+        <a href="#about" class="active">Home</a>
+        <a href="#publications">Publications</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO BANNER -->
+<div class="hero-banner" role="presentation"></div>
+
+<!-- PAGE BODY -->
+<div class="page-body">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="avatar-card">
+      <img src="profile.jpg" alt="Javid Farazin" style="width:128px;height:128px;border-radius:50%;object-fit:cover;border:4px solid #fff;box-shadow:0 0 0 1px #e0ddd6;">
+      <div class="sidebar-name">Javid Farazin</div>
+      <div class="sidebar-role">MSc Physics — Optics &amp; Photonics<br>R&amp;D Specialist, Phylabs</div>
+
+      <hr class="sidebar-hr">
+
+      <div class="sidebar-affil">
+        <strong>Institute for Advanced Studies in Basic Sciences</strong>
+        IASBS, Zanjan, Iran
+      </div>
+
+      <div class="slinks">
+        <a href="https://orcid.org/0000-0001-9636-4252" target="_blank" rel="noopener">
+          <svg class="slink-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M9.5 9h3a3 3 0 010 6H9.5V9z"/><line x1="7" y1="9" x2="7" y2="15"/></svg>
+          ORCID
+        </a>
+        <a href="https://www.webofscience.com/wos/author/record/1917028" target="_blank" rel="noopener">
+          <svg class="slink-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M7 8h10M7 12h10M7 16h6"/></svg>
+          Web of Science
+        </a>
+        <a href="https://www.researchgate.net/profile/Javid-Farazin" target="_blank" rel="noopener">
+          <svg class="slink-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2z"/><path d="M10 9h3a2 2 0 010 4h-3V9z"/><path d="M10 13l3 4"/></svg>
+          ResearchGate
+        </a>
+        <a href="https://github.com/javidfarazin" target="_blank" rel="noopener">
+          <svg class="slink-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+          GitHub
+        </a>
+        <a href="mailto:javidfarazin@gmail.com">
+          <svg class="slink-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          javidfarazin@gmail.com
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main-content">
+
+    <!-- ABOUT -->
+    <section id="about">
+      <h1 class="section-title">About me</h1>
+      <hr class="section-rule">
+
+      <p class="about-tagline">
+        Physicist exploring laser micromanipulation, intelligent microscopy, and machine learning — at the boundary where optics meets AI.
+      </p>
+
+      <div class="about-body">
+        <p>
+          I am <strong>Javid Farazin</strong>, an optical physicist with a Master of Science in <strong>Optics and Photonics</strong>
+          from the Institute for Advanced Studies in Basic Sciences (IASBS), Zanjan, Iran. My graduate research,
+          conducted within the Optical Micromanipulation Group under the supervision of Dr. Ehsan Ahadi-Akhlaghi
+          and Dr. Faegheh Hajizadeh, centred on <strong>AI-Powered Automation of Optical Tweezers</strong>: integrating
+          reinforcement learning and deep neural networks with real-time microscope image streams to enable autonomous
+          control of laser-trapped microspheres.
+        </p>
+        <p>
+          I built and calibrated a complete optical tweezers setup, then developed both a reinforcement learning
+          controller for collision-aware velocity control and a deep learning object detection pipeline for particle
+          tracking within the trap — work I presented at the <strong>4th International Conference on Light and
+          Light-Based Technologies (ICLLT 2024)</strong> in Ankara. A journal article expanding this research —
+          <em>Image-Guided Control and Monitoring of Optical Tweezers with Artificial Neural Network</em> — is
+          currently in preparation (2026).
+        </p>
+        <p>
+          I currently serve as a <strong>Research and Development Specialist</strong> at <strong>Phylabs
+          Knowledge-Based Company</strong>, IASBS Science and Technology Park, where I develop machine learning and
+          deep learning systems for biomedical classification in applied photonics, including models that distinguish
+          biological samples from visually similar substances using image and spectral data.
+        </p>
+        <p>
+          My broader interests span <strong>biophotonics</strong>, <strong>super-resolution microscopy</strong>,
+          nonlinear and quantum optics, and physics-informed machine learning. My earlier work at the University of
+          Mohaghegh Ardabili on Schottky diode fabrication, nanomaterial synthesis, and optical characterisation
+          gives me a wide experimental foundation. I have co-authored <strong>12 peer-reviewed journal articles</strong>
+          in Springer and Elsevier journals and <strong>8 conference papers</strong>.
+        </p>
+        <p>
+          I am actively seeking a <strong>fully funded PhD position in Europe</strong> at the intersection of optical
+          tweezers, microscopy, and artificial intelligence. Further details are in the
+          <a href="#publications">publications</a> and <a href="#cv">CV</a> sections.
+          For inquiries or collaborations, feel free to <a href="#contact">get in touch</a>.
+        </p>
+
+        <div class="award-block">
+          🏅 <strong>Best Poster Presentation Award — 1st Place</strong>,
+          4th International Conference on Light and Light-Based Technologies (ICLLT 2024),
+          Gazi University, Ankara, Turkey —
+          <em>"Object Detection with Deep Learning in Optical Tweezers Applications"</em>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications">
+      <h2 class="section-title">Publications</h2>
+      <hr class="section-rule">
+
+      <ul class="pub-list">
+
+        <li class="pub-item">
+          <div class="pub-title">Image-Guided Control and Monitoring of Optical Tweezers with Artificial Neural Network <span class="pub-badge badge-wip">In preparation</span></div>
+          <div class="pub-authors">J. Farazin, E. Ahadi-Akhlaghi, F. Hajizadeh</div>
+          <div class="pub-venue">First draft in progress · 2026</div>
+        </li>
+
+        <li class="pub-item">
+          <div class="pub-title">Object Detection with Deep Learning in Optical Tweezer Applications <span class="pub-badge badge-conf">Conference</span> <span class="pub-badge badge-best">🏆 Best Poster</span></div>
+          <div class="pub-authors">J. Farazin, M. Rahmani, F. Hajizadeh, E. Ahadi-Akhlaghi</div>
+          <div class="pub-venue">ICLLT 2024 · Gazi University, Ankara, Turkey</div>
+        </li>
+
+        <li class="pub-item">
+          <div class="pub-title">Effect of (Co–TeO₂-doped polyvinylpyrrolidone) organic interlayer on the electrophysical characteristics of Al/p-Si (MS) structures</div>
+          <div class="pub-authors">B. Akin, J. Farazin, G. Pirgholi-Givi, et al.</div>
+          <div class="pub-venue">Journal of Materials Science: Materials in Electronics, Springer · 2022</div>
+        </li>
+
+        <li class="pub-item">
+          <div class="pub-title">Optical and structural characterisation of nanocomposite thin films</div>
+          <div class="pub-authors">Y. Badali, J. Farazin, et al.</div>
+          <div class="pub-venue">Applied Physics A, Springer · 2021</div>
+        </li>
+
+        <li class="pub-item">
+          <div class="pub-title">Optical properties and structural analysis of ZnO-based nanostructures</div>
+          <div class="pub-authors">J. Farazin, M. Shahedi Asl, et al.</div>
+          <div class="pub-venue">Journal of Materials Science: Materials in Electronics, Springer · 2021</div>
+        </li>
+
+        <li class="pub-item">
+          <div class="pub-title">Optical characterisation of nanostructure thin films with interfacial layers</div>
+          <div class="pub-authors">A. Siabi-Garjan, J. Farazin, et al.</div>
+          <div class="pub-venue">Optik, Elsevier · 2021</div>
+        </li>
+
+      </ul>
+
+      <!-- Hidden publications -->
+      <div class="hidden-pubs" id="extra-pubs">
+        <ul class="pub-list">
+          <li class="pub-item">
+            <div class="pub-title">Photocatalytic activity and wettability of ZnO nanostructures</div>
+            <div class="pub-authors">G. Pirgholi-Givi, Y. Azizian, J. Farazin</div>
+            <div class="pub-venue">Journal of Photochemistry and Photobiology A, Elsevier · 2021</div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Interface states and electrical characteristics of metal/semiconductor contacts</div>
+            <div class="pub-authors">G. Pirgholi-Givi, Ş. Altındal, J. Farazin, et al.</div>
+            <div class="pub-venue">Physica B: Condensed Matter, Elsevier · 2021</div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">On the electrical characteristics of Al/p-Si diodes with (PVP: Sn-TeO₂) interlayer</div>
+            <div class="pub-authors">A. Sabahi Namini, G. Pirgholi-Givi, J. Farazin, Y. Azizian-Kalandaragh</div>
+            <div class="pub-venue">Applied Physics A, Springer · 2020</div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Spectroscopic and structural analysis of ZnS nanocomposites</div>
+            <div class="pub-authors">Y. Azizian-Kalandaragh, J. Farazin, et al.</div>
+            <div class="pub-venue">Applied Physics A, Springer · 2020</div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Dielectric and electrical features of Al/p-Si Schottky barrier diodes with (Bi₂Te₃–Bi₂O₃–TeO₂-PVP) interfacial film</div>
+            <div class="pub-authors">Ş. Altındal, J. Farazin, G. Pirgholi-Givi, E. Maril, Y. Azizian-Kalandaragh</div>
+            <div class="pub-venue">Physica B: Condensed Matter, Elsevier · 2020</div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Frequency and voltage dependence of dielectric properties of Schottky diodes</div>
+            <div class="pub-authors">S. Fakhri-Mirzanagh, J. Farazin, et al.</div>
+            <div class="pub-venue">Physica B: Condensed Matter, Elsevier · 2020</div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Optical and electrical characterisation of ZnO nanostructured thin films</div>
+            <div class="pub-authors">J. Farazin, G. Pirgholi-Givi, Y. Azizian-Kalandaragh</div>
+            <div class="pub-venue">Physica B: Condensed Matter, Elsevier · 2019</div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Metamaterial characterisation of nanostructured films <span class="pub-badge badge-conf">Conference</span></div>
+            <div class="pub-authors">B. Akın, G. Pirgholi-Givi, J. Farazin, et al.</div>
+            <div class="pub-venue">Metamaterials 2019 · IEEE</div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Electrical properties of interfacial nanofilm Schottky diodes <span class="pub-badge badge-conf">Conference</span></div>
+            <div class="pub-authors">Ş. Altındal, J. Farazin, et al.</div>
+            <div class="pub-venue">ICEAA 2019 · Granada, Spain · IEEE</div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Nanostructure synthesis and optical properties of photonic materials <span class="pub-badge badge-conf">Conference</span></div>
+            <div class="pub-authors">Y. Azizian-Kalandaragh, J. Farazin, G. Pirgholi-Givi</div>
+            <div class="pub-venue">ICOP 2020 · Karaj, Iran</div>
+          </li>
+        </ul>
+      </div>
+
+      <button class="show-btn" id="pub-btn" onclick="togglePubs()">Show all publications ↓</button>
+
+      <p style="margin-top: 1rem; font-size: 0.81rem; color: var(--text-light);">
+        Full record on <a href="https://orcid.org/0000-0001-9636-4252" target="_blank" rel="noopener">ORCID</a>
+        and <a href="https://www.webofscience.com/wos/author/record/1917028" target="_blank" rel="noopener">Web of Science</a>.
+      </p>
+    </section>
+
+    <!-- CV -->
+    <section id="cv">
+      <h2 class="section-title">Curriculum Vitae</h2>
+      <hr class="section-rule">
+
+      <div class="cv-cols">
+        <div>
+          <div class="cv-section-label">Education</div>
+          <div>
+            <div class="tl-item">
+              <div class="tl-year">2020 – 2024</div>
+              <div>
+                <div class="tl-title">MSc Physics — Optics &amp; Photonics</div>
+                <div class="tl-sub">IASBS, Zanjan, Iran</div>
+                <div class="tl-desc">Thesis: <em>AI-Powered Automation of Optical Tweezers</em><br>Dr. E. Ahadi-Akhlaghi · Dr. F. Hajizadeh</div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-year">2014 – 2020</div>
+              <div>
+                <div class="tl-title">BSc Physics (Theoretical)</div>
+                <div class="tl-sub">University of Mohaghegh Ardabili, Ardabil</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cv-section-label">Professional Experience</div>
+          <div>
+            <div class="tl-item">
+              <div class="tl-year">2024 – Present</div>
+              <div>
+                <div class="tl-title">R&amp;D Specialist</div>
+                <div class="tl-sub">Phylabs, IASBS S&amp;T Park, Zanjan</div>
+                <div class="tl-desc">ML/DL for biomedical classification; applied photonics</div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-year">2022 – 2024</div>
+              <div>
+                <div class="tl-title">R&amp;D Specialist</div>
+                <div class="tl-sub">Aqua Solve Zanjan, IASBS S&amp;T Park</div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-year">2017 – 2020</div>
+              <div>
+                <div class="tl-title">Research Assistant</div>
+                <div class="tl-sub">Faculty of Advanced Technologies, UMA, Namin</div>
+                <div class="tl-desc">Schottky diode fabrication; nanostructure synthesis; optical characterisation</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cv-section-label">Teaching</div>
+          <div>
+            <div class="tl-item">
+              <div class="tl-year">2020 – 2021</div>
+              <div>
+                <div class="tl-title">Modern Physics — Teaching Assistant</div>
+                <div class="tl-sub">University of Mohaghegh Ardabili</div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-year">2018 – 2019</div>
+              <div>
+                <div class="tl-title">Physics of Light Labs I &amp; II — Teaching Assistant</div>
+                <div class="tl-sub">University of Mohaghegh Ardabili</div>
+                <div class="tl-desc">Designed and delivered laboratory curriculum</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="cv-section-label">Research Skills — Programming &amp; ML</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">TensorFlow</span>
+            <span class="skill-tag">PyTorch</span>
+            <span class="skill-tag">OpenCV</span>
+            <span class="skill-tag">scikit-learn</span>
+            <span class="skill-tag">NumPy / SciPy</span>
+            <span class="skill-tag">Pandas</span>
+            <span class="skill-tag">MATLAB</span>
+            <span class="skill-tag">Reinforcement Learning</span>
+            <span class="skill-tag">Deep Learning</span>
+            <span class="skill-tag">Object Detection</span>
+          </div>
+
+          <div class="cv-section-label">Research Skills — Laboratory</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Optical Tweezers</span>
+            <span class="skill-tag">Laser Micromanipulation</span>
+            <span class="skill-tag">Microscopy &amp; Imaging</span>
+            <span class="skill-tag">Image Analysis</span>
+            <span class="skill-tag">Fluorescence Microscopy</span>
+            <span class="skill-tag">Nanostructure Synthesis</span>
+            <span class="skill-tag">Optical Spectroscopy</span>
+            <span class="skill-tag">FTIR Spectroscopy</span>
+          </div>
+
+          <div class="cv-section-label">Languages</div>
+          <div>
+            <div class="tl-item" style="padding:.55rem 0;">
+              <div class="tl-year">Native</div>
+              <div><div class="tl-sub">Azerbaijani · Turkish · Persian</div></div>
+            </div>
+            <div class="tl-item" style="padding:.55rem 0; border-bottom:none;">
+              <div class="tl-year">B2</div>
+              <div><div class="tl-sub">English — Upper-Intermediate</div></div>
+            </div>
+          </div>
+
+          <div class="cv-section-label">Honour &amp; Award</div>
+          <div>
+            <div class="tl-item" style="border-bottom:none;">
+              <div class="tl-year">2024</div>
+              <div>
+                <div class="tl-title">Best Poster Award — 1st Place</div>
+                <div class="tl-sub">ICLLT 2024 · Gazi University, Ankara</div>
+                <div class="tl-desc">"Object Detection with Deep Learning in Optical Tweezers Applications"</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2 class="section-title">Contact</h2>
+      <hr class="section-rule">
+
+      <p class="contact-note">
+        I am open to research collaborations, potential PhD supervision discussions, and conference connections.
+        Feel free to get in touch by sending me a note.
+      </p>
+
+      <div>
+        <div class="contact-row">
+          <span class="c-label">Email</span>
+          <a href="mailto:javidfarazin@gmail.com">javidfarazin@gmail.com</a>
+        </div>
+        <div class="contact-row">
+          <span class="c-label">Affiliation</span>
+          <span>Phylabs Knowledge-Based Co., IASBS, Zanjan, Iran</span>
+        </div>
+        <div class="contact-row">
+          <span class="c-label">ORCID</span>
+          <a href="https://orcid.org/0000-0001-9636-4252" target="_blank" rel="noopener">0000-0001-9636-4252</a>
+        </div>
+        <div class="contact-row">
+          <span class="c-label">Web of Science</span>
+          <a href="https://www.webofscience.com/wos/author/record/1917028" target="_blank" rel="noopener">Author record 1917028</a>
+        </div>
+        <div class="contact-row">
+          <span class="c-label">GitHub</span>
+          <a href="https://github.com/javidfarazin" target="_blank" rel="noopener">github.com/javidfarazin</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  &copy; 2026 Javid Farazin &nbsp;·&nbsp; javidfarazin.github.io
+</footer>
+
+<script>
+function togglePubs() {
+  const el = document.getElementById('extra-pubs');
+  const btn = document.getElementById('pub-btn');
+  const open = el.classList.contains('open');
+  if (open) {
+    el.classList.remove('open');
+    btn.textContent = 'Show all publications ↓';
+    btn.setAttribute('aria-expanded', 'false');
+  } else {
+    el.classList.add('open');
+    btn.textContent = 'Show fewer publications ↑';
+    btn.setAttribute('aria-expanded', 'true');
+  }
+}
+
+// Active nav on scroll
+const secs = document.querySelectorAll('section[id]');
+const navAs = document.querySelectorAll('.nav-links a[href^="#"]');
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      navAs.forEach(a => a.classList.remove('active'));
+      const hit = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
+      if (hit) hit.classList.add('active');
+    }
+  });
+}, { rootMargin: '-35% 0px -60% 0px' });
+secs.forEach(s => io.observe(s));
+
+// Smooth scroll with nav offset
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if (!t) return;
+    e.preventDefault();
+    window.scrollTo({ top: t.getBoundingClientRect().top + scrollY - 60, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>
