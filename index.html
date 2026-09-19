@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Javid Farazin, MSc</title>
-<meta name="description" content="I am a physicist and R&D researcher working at the intersection of optical tweezers, microscopy, and deep learning.">
+<meta name="description" content="Javid Farazin, physicist. Optical tweezers, microscopy and machine learning for photonics instruments.">
 <meta property="og:title" content="Javid Farazin, MSc">
-<meta property="og:description" content="Physicist & ML Researcher — Optical Tweezers · Deep Learning · Biophotonics">
+<meta property="og:description" content="Physicist. Optical tweezers, microscopy and machine learning for photonics instruments.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -117,6 +117,9 @@ section { margin-bottom: 3.25rem; }
 
 /* PUBLICATIONS */
 .pub-list { list-style: none; }
+.pub-title a { color: var(--text); }
+.pub-title a:hover { color: var(--accent); }
+#publications .cv-section-label { margin-top: 1.5rem; }
 .pub-item { padding: 1rem 0; border-bottom: 1px solid var(--border-light); }
 .pub-item:last-child { border-bottom: none; }
 .pub-title { font-family: var(--serif); font-size: 0.95rem; font-weight: 400; color: var(--text); line-height: 1.5; margin-bottom: 0.2rem; }
@@ -205,16 +208,14 @@ section { margin-bottom: 3.25rem; }
     <div class="avatar-card">
       <img class="avatar-img" src="profile.png" alt="Javid Farazin" style="width:128px;height:128px;border-radius:50%;object-fit:cover;border:4px solid #fff;box-shadow:0 0 0 1px #e0ddd6;margin:0 auto 1rem;display:block;">
       <div class="sidebar-name">Javid Farazin</div>
-      <div class="sidebar-role">MSc Physics — Optics &amp; Photonics<br>R&amp;D Specialist, Phylabs</div>
+      <div class="sidebar-role">Physicist<br>MSc in Optics &amp; Photonics</div>
 
-      <hr class="sidebar-hr">
-
-      <div class="sidebar-affil">
-        <strong>Institute for Advanced Studies in Basic Sciences</strong>
-        IASBS, Zanjan, Iran
-      </div>
 
       <div class="slinks">
+        <a href="https://scholar.google.com/citations?user=PS1BgNAAAAAJ" target="_blank" rel="noopener">
+          <svg class="slink-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 9l10-6 10 6-10 6L2 9z"/><path d="M6 11.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-4.5"/></svg>
+          Google Scholar
+        </a>
         <a href="https://orcid.org/0000-0001-9636-4252" target="_blank" rel="noopener">
           <svg class="slink-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M9.5 9h3a3 3 0 010 6H9.5V9z"/><line x1="7" y1="9" x2="7" y2="15"/></svg>
           ORCID
@@ -226,6 +227,10 @@ section { margin-bottom: 3.25rem; }
         <a href="https://www.researchgate.net/profile/Javid-Farazin" target="_blank" rel="noopener">
           <svg class="slink-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2z"/><path d="M10 9h3a2 2 0 010 4h-3V9z"/><path d="M10 13l3 4"/></svg>
           ResearchGate
+        </a>
+        <a href="https://www.linkedin.com/in/javid-farazin/" target="_blank" rel="noopener">
+          <svg class="slink-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="2"/><line x1="7" y1="10" x2="7" y2="17"/><circle cx="7" cy="7" r="0.8"/><path d="M11 17v-7M11 13a3 3 0 016 0v4"/></svg>
+          LinkedIn
         </a>
         <a href="https://github.com/javidfarazin" target="_blank" rel="noopener">
           <svg class="slink-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
@@ -248,50 +253,40 @@ section { margin-bottom: 3.25rem; }
       <hr class="section-rule">
 
       <p class="about-tagline">
-        Physicist exploring laser micromanipulation, intelligent microscopy, and machine learning — at the boundary where optics meets AI.
+        I build optical tweezers and teach them to see. My work combines laser trapping, microscopy and machine learning.
       </p>
 
       <div class="about-body">
         <p>
-          I am <strong>Javid Farazin</strong>, an optical physicist with a Master of Science in <strong>Optics and Photonics</strong>
-          from the Institute for Advanced Studies in Basic Sciences (IASBS), Zanjan, Iran. My graduate research,
-          conducted within the Optical Micromanipulation Group under the supervision of Dr. Ehsan Ahadi-Akhlaghi
-          and Dr. Faegheh Hajizadeh, centred on <strong>AI-Powered Automation of Optical Tweezers</strong>: integrating
-          reinforcement learning and deep neural networks with real-time microscope image streams to enable autonomous
-          control of laser-trapped microspheres.
+          I am a physicist with an MSc in <strong>Optics and Photonics</strong> from the Institute for Advanced Studies
+          in Basic Sciences (IASBS) in Zanjan, Iran. I did my master's research in the Optical Micromanipulation Group,
+          supervised by Dr. Ehsan Ahadi-Akhlaghi and Dr. Faegheh Hajizadeh.
         </p>
         <p>
-          I built and calibrated a complete optical tweezers setup, then developed both a reinforcement learning
-          controller for collision-aware velocity control and a deep learning object detection pipeline for particle
-          tracking within the trap — work I presented at the <strong>4th International Conference on Light and
-          Light-Based Technologies (ICLLT 2024)</strong> in Ankara. A journal article expanding this research —
-          <em>Image-Guided Control and Monitoring of Optical Tweezers with Artificial Neural Network</em> — is
-          currently in preparation (2026).
+          In my thesis, I built and calibrated an optical tweezers setup from scratch. Then I added two AI parts to it.
+          A Mask R-CNN model finds trapped particles in the live microscope image. A Q-learning agent moves them to a
+          target. The system moved 1&ndash;5&nbsp;&micro;m polystyrene beads to their targets with an 87% success rate.
+          I presented the detection part at ICLLT 2024 in Ankara, where it won the best poster award. A journal paper
+          based on this work is in preparation.
         </p>
         <p>
-          I currently serve as a <strong>Research and Development Specialist</strong> at <strong>Phylabs
-          Knowledge-Based Company</strong>, IASBS Science and Technology Park, where I develop machine learning and
-          deep learning systems for biomedical classification in applied photonics, including models that distinguish
-          biological samples from visually similar substances using image and spectral data.
+          From March 2024 to September 2026, I worked as an <strong>R&amp;D specialist at Phylabs</strong>, a knowledge-based
+          company in the IASBS Science and Technology Park. I developed machine learning and deep learning tools for
+          photonics instruments.
         </p>
         <p>
-          My broader interests span <strong>biophotonics</strong>, <strong>super-resolution microscopy</strong>,
-          nonlinear and quantum optics, and physics-informed machine learning. My earlier work at the University of
-          Mohaghegh Ardabili on Schottky diode fabrication, nanomaterial synthesis, and optical characterisation
-          gives me a wide experimental foundation. I have co-authored <strong>12 peer-reviewed journal articles</strong>
-          in Springer and Elsevier journals and <strong>8 conference papers</strong>.
+          Before optics, I worked in materials physics. As a research assistant at the University of Mohaghegh Ardabili,
+          I made Schottky diodes and nanostructures and measured their electrical and optical properties. That work led
+          to <strong>11 journal articles</strong> and <strong>8 conference papers</strong>.
         </p>
         <p>
-          You can find my full list of <a href="#publications">publications</a> and
-          <a href="#cv">CV</a> in the sections below.
-          Feel free to <a href="#contact">contact me</a> for inquiries or collaborations.
+          My main interests are optical trapping of micro- and nanoparticles, AI-based control of optical instruments,
+          real-time object detection in microscopy, and machine learning built into lab hardware.
         </p>
 
         <div class="award-block">
-          &#127medals; <strong>Best Poster Presentation Award — 1st Place</strong>,
-          4th International Conference on Light and Light-Based Technologies (ICLLT 2024),
-          Gazi University, Ankara, Turkey —
-          <em>"Object Detection with Deep Learning in Optical Tweezers Applications"</em>
+          <strong>Best Poster Presentation Award (1st place)</strong>, ICLLT 2024, Gazi University, Ankara &mdash;
+          <em>Object Detection with Deep Learning in Optical Tweezer Applications</em>
         </div>
       </div>
     </section>
@@ -301,98 +296,128 @@ section { margin-bottom: 3.25rem; }
       <h2 class="section-title">Publications</h2>
       <hr class="section-rule">
 
+      <div class="cv-section-label">In preparation</div>
       <ul class="pub-list">
         <li class="pub-item">
           <div class="pub-title">Image-Guided Control and Monitoring of Optical Tweezers with Artificial Neural Network <span class="pub-badge badge-wip">In preparation</span></div>
-          <div class="pub-authors">J. Farazin, E. Ahadi-Akhlaghi, F. Hajizadeh</div>
-          <div class="pub-venue">First draft in progress · 2026</div>
+          <div class="pub-authors"><strong>J. Farazin</strong>, E. Ahadi-Akhlaghi, F. Hajizadeh</div>
+          <div class="pub-venue">Draft · 2026</div>
+        </li>
+      </ul>
+
+      <div class="cv-section-label">Journal articles</div>
+      <ul class="pub-list">
+        <li class="pub-item">
+          <div class="pub-title"><a href="https://link.springer.com/article/10.1007/s10854-022-08984-2" target="_blank" rel="noopener">A comparison electric-dielectric features of Al/p-Si (MS) and Al/(Al<sub>2</sub>O<sub>3</sub>:PVP)/p-Si (MPS) structures using voltage&ndash;current (V&ndash;I) and frequency&ndash;impedance (f&ndash;Z) measurements</a></div>
+          <div class="pub-authors">B. Akin, <strong>J. Farazin</strong>, &#350;. Alt&#305;ndal, Y. Azizian-Kalandaragh</div>
+          <div class="pub-venue">Journal of Materials Science: Materials in Electronics · 2022</div>
         </li>
         <li class="pub-item">
-          <div class="pub-title">Object Detection with Deep Learning in Optical Tweezer Applications <span class="pub-badge badge-conf">Conference</span> <span class="pub-badge badge-best">&#127; Best Poster</span></div>
-          <div class="pub-authors">J. Farazin, M. Rahmani, F. Hajizadeh, E. Ahadi-Akhlaghi</div>
-          <div class="pub-venue">ICLLT 2024 · Gazi University, Ankara, Turkey</div>
+          <div class="pub-title"><a href="https://link.springer.com/article/10.1007/s00339-021-04400-4" target="_blank" rel="noopener">Graphene doped (Bi<sub>2</sub>Te<sub>3</sub>&ndash;Bi<sub>2</sub>O<sub>3</sub>&ndash;TeO<sub>2</sub>):PVP dielectrics in metal&ndash;semiconductor structures</a></div>
+          <div class="pub-authors">Y. Badali, <strong>J. Farazin</strong>, G. Pirgholi-Givi, &#350;. Alt&#305;ndal, Y. Azizian-Kalandaragh</div>
+          <div class="pub-venue">Applied Physics A · 2021</div>
         </li>
         <li class="pub-item">
-          <div class="pub-title">Effect of (Co&#8211;TeO&#x2082;-doped polyvinylpyrrolidone) organic interlayer on the electrophysical characteristics of Al/p-Si (MS) structures</div>
-          <div class="pub-authors">B. Akin, J. Farazin, G. Pirgholi-Givi, et al.</div>
-          <div class="pub-venue">Journal of Materials Science: Materials in Electronics, Springer · 2022</div>
+          <div class="pub-title"><a href="https://link.springer.com/article/10.1007/s10854-021-06544-8" target="_blank" rel="noopener">Effect of (Co&ndash;TeO<sub>2</sub>-doped polyvinylpyrrolidone) organic interlayer on the electrophysical characteristics of Al/p-Si (MS) structures</a></div>
+          <div class="pub-authors"><strong>J. Farazin</strong>, M. Shahedi Asl, G. Pirgholi-Givi, S.A. Delbari, A. Sabahi Namini, &#350;. Alt&#305;ndal, Y. Azizian-Kalandaragh</div>
+          <div class="pub-venue">Journal of Materials Science: Materials in Electronics · 2021</div>
         </li>
         <li class="pub-item">
-          <div class="pub-title">Optical and structural characterisation of nanocomposite thin films</div>
-          <div class="pub-authors">Y. Badali, J. Farazin, et al.</div>
-          <div class="pub-venue">Applied Physics A, Springer · 2021</div>
+          <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0030402621006537" target="_blank" rel="noopener">Formation of CdS/ZnS nanoparticles in polymer matrix by SILAR method: Experiments and exploring its optical properties with DDA calculations</a></div>
+          <div class="pub-authors">A. Siabi-Garjan, <strong>J. Farazin</strong>, G. Pirgholi-Givi, Y. Azizian-Kalandaragh</div>
+          <div class="pub-venue">Optik · 2021</div>
         </li>
         <li class="pub-item">
-          <div class="pub-title">Optical properties and structural analysis of ZnO-based nanostructures</div>
-          <div class="pub-authors">J. Farazin, M. Shahedi Asl, et al.</div>
-          <div class="pub-venue">Journal of Materials Science: Materials in Electronics, Springer · 2021</div>
-        </li>
-        <li class="pub-item">
-          <div class="pub-title">Optical characterisation of nanostructure thin films with interfacial layers</div>
-          <div class="pub-authors">A. Siabi-Garjan, J. Farazin, et al.</div>
-          <div class="pub-venue">Optik, Elsevier · 2021</div>
+          <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S1010603020309011" target="_blank" rel="noopener">Comparison of the photocatalytic activity of perovskite structures: bismuth, barium, and zinc titanate nanostructures for photodegradation of Methylene blue from water</a></div>
+          <div class="pub-authors">G. Pirgholi-Givi, Y. Azizian-Kalandaragh, <strong>J. Farazin</strong></div>
+          <div class="pub-venue">Journal of Photochemistry and Photobiology A: Chemistry · 2021</div>
         </li>
       </ul>
 
       <div class="hidden-pubs" id="extra-pubs">
         <ul class="pub-list">
           <li class="pub-item">
-            <div class="pub-title">Photocatalytic activity and wettability of ZnO nanostructures</div>
-            <div class="pub-authors">G. Pirgholi-Givi, Y. Azizian, J. Farazin</div>
-            <div class="pub-venue">Journal of Photochemistry and Photobiology A, Elsevier · 2021</div>
+            <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0921452620306098" target="_blank" rel="noopener">The effect of cadmium impurities in the (PVP&ndash;TeO<sub>2</sub>) interlayer in Al/p-Si (MS) Schottky barrier diodes (SBDs): Exploring its electrophysical parameters</a></div>
+            <div class="pub-authors">G. Pirgholi-Givi, &#350;. Alt&#305;ndal, M. Shahedi Asl, A. Sabahi Namini, <strong>J. Farazin</strong>, Y. Azizian-Kalandaragh</div>
+            <div class="pub-venue">Physica B: Condensed Matter · 2021</div>
           </li>
           <li class="pub-item">
-            <div class="pub-title">Interface states and electrical characteristics of metal/semiconductor contacts</div>
-            <div class="pub-authors">G. Pirgholi-Givi, &#350;. Alt&#305;ndal, J. Farazin, et al.</div>
-            <div class="pub-venue">Physica B: Condensed Matter, Elsevier · 2021</div>
+            <div class="pub-title"><a href="https://link.springer.com/article/10.1007/s00339-020-04086-0" target="_blank" rel="noopener">On the electrical characteristics of Al/p-Si diodes with and without (PVP:Sn-TeO<sub>2</sub>) interlayer using current&ndash;voltage (I&ndash;V) measurements</a></div>
+            <div class="pub-authors">A. Sabahi Namini, M. Shahedi Asl, G. Pirgholi-Givi, S.A. Delbari, <strong>J. Farazin</strong>, &#350;. Alt&#305;ndal, Y. Azizian-Kalandaragh</div>
+            <div class="pub-venue">Applied Physics A · 2020</div>
           </li>
           <li class="pub-item">
-            <div class="pub-title">On the electrical characteristics of Al/p-Si diodes with (PVP: Sn-TeO&#x2082;) interlayer</div>
-            <div class="pub-authors">A. Sabahi Namini, G. Pirgholi-Givi, J. Farazin, Y. Azizian-Kalandaragh</div>
-            <div class="pub-venue">Applied Physics A, Springer · 2020</div>
+            <div class="pub-title"><a href="https://link.springer.com/article/10.1007/s00339-020-03804-y" target="_blank" rel="noopener">Electrical and dielectric properties of Al/(PVP:Zn-TeO<sub>2</sub>)/p-Si heterojunction structures using current&ndash;voltage (I&ndash;V) and impedance&ndash;frequency (Z&ndash;f) measurements</a></div>
+            <div class="pub-authors">Y. Azizian-Kalandaragh, <strong>J. Farazin</strong>, &#350;. Alt&#305;ndal, M. Shahedi Asl, G. Pirgholi-Givi, S.A. Delbari, A. Sabahi Namini</div>
+            <div class="pub-venue">Applied Physics A · 2020</div>
           </li>
           <li class="pub-item">
-            <div class="pub-title">Spectroscopic and structural analysis of ZnS nanocomposites</div>
-            <div class="pub-authors">Y. Azizian-Kalandaragh, J. Farazin, et al.</div>
-            <div class="pub-venue">Applied Physics A, Springer · 2020</div>
+            <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0921452620300776" target="_blank" rel="noopener">The effect of capping agent on the structural, optical properties and photocatalytic activity of MgO nanostructures</a></div>
+            <div class="pub-authors">S. Fakhri-Mirzanagh, K. Ahadzadeh-Namin, G. Pirgholi-Givi, <strong>J. Farazin</strong>, Y. Azizian-Kalandaragh</div>
+            <div class="pub-venue">Physica B: Condensed Matter · 2020</div>
           </li>
           <li class="pub-item">
-            <div class="pub-title">Dielectric and electrical features of Al/p-Si Schottky barrier diodes with interfacial film</div>
-            <div class="pub-authors">&#350;. Alt&#305;ndal, J. Farazin, G. Pirgholi-Givi, E. Maril, Y. Azizian-Kalandaragh</div>
-            <div class="pub-venue">Physica B: Condensed Matter, Elsevier · 2020</div>
+            <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0921452619308373" target="_blank" rel="noopener">The effects of (Bi<sub>2</sub>Te<sub>3</sub>&ndash;Bi<sub>2</sub>O<sub>3</sub>&ndash;TeO<sub>2</sub>&ndash;PVP) interfacial film on the dielectric and electrical features of Al/p-Si (MS) Schottky barrier diodes (SBDs)</a></div>
+            <div class="pub-authors">&#350;. Alt&#305;ndal, <strong>J. Farazin</strong>, G. Pirgholi-Givi, E. Mar&#305;l, Y. Azizian-Kalandaragh</div>
+            <div class="pub-venue">Physica B: Condensed Matter · 2020</div>
           </li>
           <li class="pub-item">
-            <div class="pub-title">Frequency and voltage dependence of dielectric properties of Schottky diodes</div>
-            <div class="pub-authors">S. Fakhri-Mirzanagh, J. Farazin, et al.</div>
-            <div class="pub-venue">Physica B: Condensed Matter, Elsevier · 2020</div>
+            <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0921452619302108" target="_blank" rel="noopener">Wettability measurement, optical characteristics, and investigation of the quantum confinement effect of ZnS-scotch tape nanocomposite films prepared by successive ionic layer adsorption and reaction (SILAR) method</a></div>
+            <div class="pub-authors"><strong>J. Farazin</strong>, G. Pirgholi-Givi, Y. Azizian-Kalandaragh</div>
+            <div class="pub-venue">Physica B: Condensed Matter · 2019</div>
+          </li>
+        </ul>
+
+        <div class="cv-section-label">Conference papers</div>
+        <ul class="pub-list">
+          <li class="pub-item">
+            <div class="pub-title">Object Detection with Deep Learning in Optical Tweezer Applications <span class="pub-badge badge-best">Best Poster</span></div>
+            <div class="pub-authors"><strong>J. Farazin</strong>, M. Rahmani, F. Hajizadeh, E. Ahadi-Akhlaghi</div>
+            <div class="pub-venue">4th Int. Conf. on Light and Light-Based Technologies (ICLLT 2024), Ankara · 2024</div>
           </li>
           <li class="pub-item">
-            <div class="pub-title">Optical and electrical characterisation of ZnO nanostructured thin films</div>
-            <div class="pub-authors">J. Farazin, G. Pirgholi-Givi, Y. Azizian-Kalandaragh</div>
-            <div class="pub-venue">Physica B: Condensed Matter, Elsevier · 2019</div>
+            <div class="pub-title"><a href="http://opsi.ir/browse.php?a_id=2181&amp;sid=1&amp;slc_lang=en" target="_blank" rel="noopener">Preparation of CdS/ZnS-polymer nanocomposite by SILAR method</a></div>
+            <div class="pub-authors">Y. Azizian-Kalandaragh, <strong>J. Farazin</strong>, G. Pirgholi-Givi</div>
+            <div class="pub-venue">ICOP 2020, Karaj · 2020</div>
           </li>
           <li class="pub-item">
-            <div class="pub-title">Metamaterial characterisation of nanostructured films <span class="pub-badge badge-conf">Conference</span></div>
-            <div class="pub-authors">B. Ak&#305;n, G. Pirgholi-Givi, J. Farazin, et al.</div>
-            <div class="pub-venue">Metamaterials 2019 · IEEE</div>
+            <div class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/8900917/" target="_blank" rel="noopener">Al<sub>2</sub>O<sub>3</sub>/PVP nanocomposite as interfacial layer for Schottky structures</a></div>
+            <div class="pub-authors">B. Ak&#305;n, G. Pirgholi-Givi, <strong>J. Farazin</strong>, Y. Azizian-Kalandaragh, &#350;. Alt&#305;ndal</div>
+            <div class="pub-venue">IEEE Metamaterials 2019 · 2019</div>
           </li>
           <li class="pub-item">
-            <div class="pub-title">Electrical properties of interfacial nanofilm Schottky diodes <span class="pub-badge badge-conf">Conference</span></div>
-            <div class="pub-authors">&#350;. Alt&#305;ndal, J. Farazin, et al.</div>
-            <div class="pub-venue">ICEAA 2019 · Granada, Spain · IEEE</div>
+            <div class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/8879258" target="_blank" rel="noopener">Morphological and Structural Properties of Metamaterial Based on ITO/Sapphire/ZnS/Al Superlattice</a></div>
+            <div class="pub-authors">&#350;. Alt&#305;ndal, <strong>J. Farazin</strong>, G. Pirgholi-Givi, Y. Azizian-Kalandaragh, B. Ak&#305;n</div>
+            <div class="pub-venue">IEEE ICEAA 2019, Granada, pp. 816&ndash;819 · 2019</div>
           </li>
           <li class="pub-item">
-            <div class="pub-title">Nanostructure synthesis and optical properties of photonic materials <span class="pub-badge badge-conf">Conference</span></div>
-            <div class="pub-authors">Y. Azizian-Kalandaragh, J. Farazin, G. Pirgholi-Givi</div>
-            <div class="pub-venue">ICOP 2020 · Karaj, Iran</div>
+            <div class="pub-title">The Effect of the Etching Rate on the Main Electrical Properties of p-Si</div>
+            <div class="pub-authors">Y. Azizian-Kalandaragh, G. Pirgholi-Givi, <strong>J. Farazin</strong></div>
+            <div class="pub-venue">NEM 2019, Istanbul · 2019</div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">The Effect of the Electrochemical Etching Process Rate on Electrical Properties of P-Silicon</div>
+            <div class="pub-authors">G. Pirgholi-Givi, <strong>J. Farazin</strong>, Y. Azizian-Kalandaragh, L. Anatolievich-Golovan</div>
+            <div class="pub-venue">1st Int. Conf. on Optoelectronics, Applied Optics and Microelectronics, Namin · 2019</div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Optical and structural characteristics of ZnS-polymer nanocomposite materials prepared by SILAR method</div>
+            <div class="pub-authors">Y. Azizian-Kalandaragh, <strong>J. Farazin</strong>, G. Pirgholi-Givi</div>
+            <div class="pub-venue">MSNG 2018, Cappadocia · 2018</div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Preparation and Optical Characterization of CdS/ZnS polymer Superlattice Nanocomposites</div>
+            <div class="pub-authors">Y. Azizian-Kalandaragh, <strong>J. Farazin</strong>, G. Pirgholi-Givi</div>
+            <div class="pub-venue">OEMT 2018, K&#305;rklareli · 2018</div>
           </li>
         </ul>
       </div>
 
-      <button class="show-btn" id="pub-btn" onclick="togglePubs()">Show all publications &#x2193;</button>
+      <button class="show-btn" id="pub-btn" onclick="togglePubs()" aria-expanded="false">Show all publications &#x2193;</button>
 
       <p style="margin-top: 1rem; font-size: 0.81rem; color: var(--text-light);">
-        Full record on <a href="https://orcid.org/0000-0001-9636-4252" target="_blank" rel="noopener">ORCID</a>
+        Full record on <a href="https://scholar.google.com/citations?user=PS1BgNAAAAAJ" target="_blank" rel="noopener">Google Scholar</a>,
+        <a href="https://orcid.org/0000-0001-9636-4252" target="_blank" rel="noopener">ORCID</a>
         and <a href="https://www.webofscience.com/wos/author/record/1917028" target="_blank" rel="noopener">Web of Science</a>.
       </p>
     </section>
@@ -407,45 +432,46 @@ section { margin-bottom: 3.25rem; }
           <div class="cv-section-label">Education</div>
           <div>
             <div class="tl-item">
-              <div class="tl-year">2020 &#8211; 2024</div>
+              <div class="tl-year">2020 &ndash; 2024</div>
               <div>
-                <div class="tl-title">MSc Physics &#8212; Optics &amp; Photonics</div>
+                <div class="tl-title">MSc Physics &mdash; Optics &amp; Photonics</div>
                 <div class="tl-sub">IASBS, Zanjan, Iran</div>
-                <div class="tl-desc">Thesis: <em>AI-Powered Automation of Optical Tweezers</em><br>Dr. E. Ahadi-Akhlaghi · Dr. F. Hajizadeh</div>
+                <div class="tl-desc">Thesis: <em>Targeted guidance of trapped particles using reinforcement learning and convolutional neural networks</em><br>Supervisors: Dr. E. Ahadi-Akhlaghi, Dr. F. Hajizadeh</div>
               </div>
             </div>
             <div class="tl-item">
-              <div class="tl-year">2014 &#8211; 2020</div>
+              <div class="tl-year">2014 &ndash; 2020</div>
               <div>
-                <div class="tl-title">BSc Physics (Theoretical)</div>
-                <div class="tl-sub">University of Mohaghegh Ardabili, Ardabil</div>
+                <div class="tl-title">BSc Physics (Theoretical Physics)</div>
+                <div class="tl-sub">University of Mohaghegh Ardabili, Ardabil, Iran</div>
               </div>
             </div>
           </div>
 
-          <div class="cv-section-label">Professional Experience</div>
+          <div class="cv-section-label">Experience</div>
           <div>
             <div class="tl-item">
-              <div class="tl-year">2024 &#8211; Present</div>
+              <div class="tl-year">2024 &ndash; 2026</div>
               <div>
                 <div class="tl-title">R&amp;D Specialist</div>
-                <div class="tl-sub">Phylabs, IASBS S&amp;T Park, Zanjan</div>
-                <div class="tl-desc">ML/DL for biomedical classification; applied photonics</div>
+                <div class="tl-sub">Phylabs Knowledge-Based Company, IASBS Science and Technology Park, Zanjan</div>
+                <div class="tl-desc">Machine learning and deep learning tools for photonics instruments</div>
               </div>
             </div>
             <div class="tl-item">
-              <div class="tl-year">2022 &#8211; 2024</div>
+              <div class="tl-year">2022 &ndash; 2024</div>
               <div>
-                <div class="tl-title">R&amp;D Specialist</div>
-                <div class="tl-sub">Aqua Solve Zanjan, IASBS S&amp;T Park</div>
+                <div class="tl-title">R&amp;D Specialist (part-time)</div>
+                <div class="tl-sub">Aqua Solve Zanjan, IASBS Science and Technology Park</div>
+                <div class="tl-desc">Fresh water for rural homes from sea and brackish water, using solar and wind energy</div>
               </div>
             </div>
             <div class="tl-item">
-              <div class="tl-year">2017 &#8211; 2020</div>
+              <div class="tl-year">2017 &ndash; 2020</div>
               <div>
                 <div class="tl-title">Research Assistant</div>
-                <div class="tl-sub">Faculty of Advanced Technologies, UMA, Namin</div>
-                <div class="tl-desc">Schottky diode fabrication; nanostructure synthesis; optical characterisation</div>
+                <div class="tl-sub">Faculty of Advanced Technologies, University of Mohaghegh Ardabili, Namin</div>
+                <div class="tl-desc">Schottky diodes, nanomaterial synthesis, wettability, photocatalytic degradation of methylene blue</div>
               </div>
             </div>
           </div>
@@ -453,71 +479,83 @@ section { margin-bottom: 3.25rem; }
           <div class="cv-section-label">Teaching</div>
           <div>
             <div class="tl-item">
-              <div class="tl-year">2020 &#8211; 2021</div>
+              <div class="tl-year">2020 &ndash; 2021</div>
               <div>
-                <div class="tl-title">Modern Physics &#8212; Teaching Assistant</div>
+                <div class="tl-title">Teaching Assistant, Modern Physics</div>
                 <div class="tl-sub">University of Mohaghegh Ardabili</div>
+                <div class="tl-desc">Problem sessions</div>
               </div>
             </div>
             <div class="tl-item">
-              <div class="tl-year">2018 &#8211; 2019</div>
+              <div class="tl-year">2018 &ndash; 2019</div>
               <div>
-                <div class="tl-title">Physics of Light Labs I &amp; II &#8212; Teaching Assistant</div>
+                <div class="tl-title">Teaching Assistant, Physics of Light Lab I &amp; II</div>
                 <div class="tl-sub">University of Mohaghegh Ardabili</div>
-                <div class="tl-desc">Designed and delivered laboratory curriculum</div>
+                <div class="tl-desc">Designed the lab curriculum and organized lab lectures</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cv-section-label">Service</div>
+          <div>
+            <div class="tl-item">
+              <div class="tl-year">2019</div>
+              <div>
+                <div class="tl-title">Organizer and Co-director</div>
+                <div class="tl-sub">1st International Conference on Optoelectronics, Applied Optics and Microelectronics, University of Mohaghegh Ardabili</div>
               </div>
             </div>
           </div>
         </div>
 
         <div>
-          <div class="cv-section-label">Research Skills &#8212; Programming &amp; ML</div>
+          <div class="cv-section-label">Programming &amp; machine learning</div>
           <div class="skill-tags">
             <span class="skill-tag">Python</span>
-            <span class="skill-tag">TensorFlow</span>
             <span class="skill-tag">PyTorch</span>
+            <span class="skill-tag">TensorFlow</span>
             <span class="skill-tag">OpenCV</span>
             <span class="skill-tag">scikit-learn</span>
             <span class="skill-tag">NumPy / SciPy</span>
             <span class="skill-tag">Pandas</span>
             <span class="skill-tag">MATLAB</span>
-            <span class="skill-tag">Reinforcement Learning</span>
             <span class="skill-tag">Deep Learning</span>
-            <span class="skill-tag">Object Detection</span>
+            <span class="skill-tag">Reinforcement Learning</span>
+            <span class="skill-tag">Object Detection (Mask R-CNN)</span>
           </div>
 
-          <div class="cv-section-label">Research Skills &#8212; Laboratory</div>
+          <div class="cv-section-label">Laboratory</div>
           <div class="skill-tags">
-            <span class="skill-tag">Optical Tweezers</span>
-            <span class="skill-tag">Laser Micromanipulation</span>
-            <span class="skill-tag">Microscopy &amp; Imaging</span>
-            <span class="skill-tag">Image Analysis</span>
+            <span class="skill-tag">Optical Tweezers: build, align, calibrate</span>
+            <span class="skill-tag">Bright-field Microscopy</span>
             <span class="skill-tag">Fluorescence Microscopy</span>
+            <span class="skill-tag">Real-time Image Acquisition</span>
+            <span class="skill-tag">Laser Integration &amp; Safety</span>
             <span class="skill-tag">Nanostructure Synthesis</span>
-            <span class="skill-tag">Optical Spectroscopy</span>
             <span class="skill-tag">FTIR Spectroscopy</span>
+            <span class="skill-tag">Optical Spectroscopy</span>
           </div>
 
           <div class="cv-section-label">Languages</div>
           <div>
             <div class="tl-item" style="padding:.55rem 0;">
               <div class="tl-year">Native</div>
-              <div><div class="tl-sub">Azerbaijani · Turkish · Persian</div></div>
+              <div><div class="tl-sub">Azerbaijani · Persian · Turkish</div></div>
             </div>
             <div class="tl-item" style="padding:.55rem 0; border-bottom:none;">
               <div class="tl-year">B2</div>
-              <div><div class="tl-sub">English &#8212; Upper-Intermediate</div></div>
+              <div><div class="tl-sub">English (professional working)</div></div>
             </div>
           </div>
 
-          <div class="cv-section-label">Honour &amp; Award</div>
+          <div class="cv-section-label">Honors</div>
           <div>
             <div class="tl-item" style="border-bottom:none;">
               <div class="tl-year">2024</div>
               <div>
-                <div class="tl-title">Best Poster Award &#8212; 1st Place</div>
-                <div class="tl-sub">ICLLT 2024 · Gazi University, Ankara</div>
-                <div class="tl-desc">"Object Detection with Deep Learning in Optical Tweezers Applications"</div>
+                <div class="tl-title">Best Poster Presentation Award (1st place)</div>
+                <div class="tl-sub">ICLLT 2024, Gazi University, Ankara</div>
+                <div class="tl-desc"><em>Object Detection with Deep Learning in Optical Tweezer Applications</em>. Award presented by Prof. Gerd Leuchs.</div>
               </div>
             </div>
           </div>
@@ -531,8 +569,8 @@ section { margin-bottom: 3.25rem; }
       <hr class="section-rule">
 
       <p class="contact-note">
-        I am open to research collaborations, potential PhD supervision discussions, and conference connections.
-        Feel free to get in touch by sending me a note.
+        I'm happy to hear about research collaborations and to connect with people working on optical trapping,
+        microscopy or machine learning for lab instruments. Email is the best way to reach me.
       </p>
 
       <div>
@@ -541,8 +579,12 @@ section { margin-bottom: 3.25rem; }
           <a href="mailto:javidfarazin@gmail.com">javidfarazin@gmail.com</a>
         </div>
         <div class="contact-row">
-          <span class="c-label">Affiliation</span>
-          <span>Phylabs Knowledge-Based Co., IASBS, Zanjan, Iran</span>
+          <span class="c-label">LinkedIn</span>
+          <a href="https://www.linkedin.com/in/javid-farazin/" target="_blank" rel="noopener">linkedin.com/in/javid-farazin</a>
+        </div>
+        <div class="contact-row">
+          <span class="c-label">Google Scholar</span>
+          <a href="https://scholar.google.com/citations?user=PS1BgNAAAAAJ" target="_blank" rel="noopener">Profile</a>
         </div>
         <div class="contact-row">
           <span class="c-label">ORCID</span>
